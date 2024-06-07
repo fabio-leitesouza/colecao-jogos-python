@@ -29,8 +29,9 @@ def cadastrar_novo_jogo():
     os.system('cls')
     print('Cadastrar novo jogo\n')
     nome_jogo = input('Digite o nome do Jogo: ')
-    jogos.append(nome_jogo)
-    print(jogos)
+    categoria = input('Digite a categoria do jogo: ')
+    dados_do_jogo = {'nome':nome_jogo, 'categoria':categoria, 'ativo':False}
+    jogos.append(dados_do_jogo)
     input('Digite uma tecla para reiniciar: ')
     main()
 
