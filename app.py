@@ -1,5 +1,7 @@
 import os
 
+jogos = []
+
 def exibir_nome_do_programa():
     print("""
     █▀▀ █▀█ █░░ █▀▀ █▀▀ ▄▀█ █▀█   █▀▄ █▀▀   ░░█ █▀█ █▀▀ █▀█ █▀
@@ -21,13 +23,22 @@ def opcao_invalida():
     input('Digite uma tecla para reiniciar: ')
     main()
 
+def cadastrar_novo_jogo():
+    os.system('cls')
+    print('Cadastrar novo jogo\n')
+    nome_jogo = input('Digite o nome do Jogo: ')
+    jogos.append(nome_jogo)
+    print(jogos)
+    input('Digite uma tecla para reiniciar: ')
+    main()
+
 def escolher_opcao():
     try:
         opcao_escolhida = int(input('Escolha uma opção: '))
         print(f'Você escolheu a opção: {opcao_escolhida}')
 
         if opcao_escolhida == 1:
-            print('Cadastro de jogos')
+            cadastrar_novo_jogo()
         elif opcao_escolhida == 2:
             print('Listar jogos')
         elif opcao_escolhida == 3:
