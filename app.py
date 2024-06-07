@@ -1,8 +1,8 @@
 import os
 
-jogos = [{'nome':'Zelda', 'Categoria':'RPG', 'ativo':False},
-         {'nome':'Mario', 'Categoria':'Plataforma', 'ativo':True},
-         {'nome':'Metroid', 'Categoria':'Plataforma', 'ativo':True}]
+jogos = [{'nome':'Zelda', 'categoria':'RPG', 'ativo':False},
+         {'nome':'Mario', 'categoria':'Plataforma', 'ativo':True},
+         {'nome':'Metroid', 'categoria':'Plataforma', 'ativo':True}]
 
 def exibir_nome_do_programa():
     print("""
@@ -38,7 +38,10 @@ def listar_jogos():
     os.system('cls')
     print('Lista de jogos\n')
     for jogo in jogos:
-        print(f'{jogo}\n')
+        nome_do_jogo = jogo['nome']
+        categoria_do_jogo = jogo['categoria']
+        ativo_jogo = jogo['ativo']
+        print(f' - {nome_do_jogo} | {categoria_do_jogo} | {ativo_jogo}' )
 
     input('Digite uma tecla para reiniciar: ')
     main()
