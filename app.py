@@ -1,6 +1,8 @@
 import os
 
-jogos = []
+jogos = [{'nome':'Zelda', 'Categoria':'RPG', 'ativo':False},
+         {'nome':'Mario', 'Categoria':'Plataforma', 'ativo':True},
+         {'nome':'Metroid', 'Categoria':'Plataforma', 'ativo':True}]
 
 def exibir_nome_do_programa():
     print("""
