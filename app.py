@@ -32,6 +32,15 @@ def cadastrar_novo_jogo():
     input('Digite uma tecla para reiniciar: ')
     main()
 
+def listar_jogos():
+    os.system('cls')
+    print('Lista de jogos\n')
+    for jogo in jogos:
+        print(f'{jogo}\n')
+
+    input('Digite uma tecla para reiniciar: ')
+    main()
+
 def escolher_opcao():
     try:
         opcao_escolhida = int(input('Escolha uma opção: '))
@@ -40,7 +49,7 @@ def escolher_opcao():
         if opcao_escolhida == 1:
             cadastrar_novo_jogo()
         elif opcao_escolhida == 2:
-            print('Listar jogos')
+            listar_jogos()
         elif opcao_escolhida == 3:
             print('Ativar jogo')
         elif opcao_escolhida == 4:
