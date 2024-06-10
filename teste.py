@@ -1,7 +1,7 @@
-def saudacao():
-    return 5
+def saudacao(nome):
+    return f'olá {nome}'
 
-saucoes = saudacao()
+saucoes = saudacao('Annya')
 
 print(saucoes)
 
