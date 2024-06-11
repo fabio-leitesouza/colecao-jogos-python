@@ -18,8 +18,11 @@ def exibir_opcoes():
 
 def exibir_subtitulo(texto):
     os.system('cls')
+    linha = '-' * (len(texto))
+    print(linha)
     print(texto)
-    print() 
+    print(linha)
+    print()
 
 def finalizar_app():
     os.system('cls')
@@ -58,10 +61,10 @@ def alternar_estado_jogo():
     for jogo in jogos:
         if nome_jogo == jogo['nome']:
             jogo['ativo'] = not jogo['ativo']
-            if jogo['ativo']:
-               print(f'O jogo {nome_jogo} está ativado')
-            else:
-                print(f'O jogo {nome_jogo} está desativado')  
+                            
+            mensagem = f'O jogo {nome_jogo} está ativado' if jogo['ativo'] else f'O jogo {nome_jogo} está desativado'
+            print(mensagem)
+        
     main()
 
 def escolher_opcao():
