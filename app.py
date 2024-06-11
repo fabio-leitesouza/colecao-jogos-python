@@ -45,13 +45,13 @@ def cadastrar_novo_jogo():
     main()
 
 def listar_jogos():
-    os.system('cls')
     exibir_subtitulo('Listando os Jogos')
+    print(f" - {'Nome do Jogo'.ljust(15)} | {'Categoria'.ljust(15)} | Status")
     for jogo in jogos:
         nome_do_jogo = jogo['nome']
         categoria_do_jogo = jogo['categoria']
         ativo_jogo = 'ativado' if jogo['ativo'] else 'desativado'
-        print(f' - {nome_do_jogo.ljust(15)} | {categoria_do_jogo.ljust(15)} | {ativo_jogo.ljust(15)}' )
+        print(f' - {nome_do_jogo.ljust(15)} | {categoria_do_jogo.ljust(15)} | {ativo_jogo}' )
 
     input('Digite uma tecla para reiniciar: ')
     main()
