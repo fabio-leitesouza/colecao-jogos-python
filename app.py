@@ -13,7 +13,7 @@ def exibir_nome_do_programa():
 def exibir_opcoes():
     print('1. Cadastrar jogo')
     print('2. Listar jogos')
-    print('3. Ativar jogo')
+    print('3. Alterar estado do jogo')
     print('4. sair\n')
 
 def exibir_subtitulo(texto):
@@ -21,6 +21,7 @@ def exibir_subtitulo(texto):
     linha = '-' * (len(texto))
     print(linha)
     print(texto)
+    
     print(linha)
     print()
 
@@ -49,8 +50,8 @@ def listar_jogos():
     for jogo in jogos:
         nome_do_jogo = jogo['nome']
         categoria_do_jogo = jogo['categoria']
-        ativo_jogo = jogo['ativo']
-        print(f' - {nome_do_jogo} | {categoria_do_jogo} | {ativo_jogo}' )
+        ativo_jogo = 'ativado' if jogo['ativo'] else 'desativado'
+        print(f' - {nome_do_jogo.ljust(15)} | {categoria_do_jogo.ljust(15)} | {ativo_jogo.ljust(15)}' )
 
     input('Digite uma tecla para reiniciar: ')
     main()
